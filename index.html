@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Two Sides of the Same Coin</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+		<!-- jQuery codes -->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("img").mouseenter(function(){
+					$(this).fadeOut(250, function(){
+						$(this).fadeIn("fast").attr("src", $(this).attr("src").replace("front", "back"));
+					});
+				});
+				$("img").mouseleave(function(){
+					$(this).fadeOut(250, function(){
+						$(this).fadeIn("fast").attr("src", $(this).attr("src").replace("back", "front"));
+					});			
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper" class="hero-unit">
+			<h1>Two Sides of the Same Coin</h1>
+			<div id="coin_box">
+				<ul>
+					<li><img src="images/penny_front.gif" alt="#"></li>
+					<li><img src="images/nickel_front.gif" alt="#"></li>
+					<li><img src="images/dime_front.gif" alt="#"></li>
+					<li><img src="images/quarter_front.gif" alt="#"></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
